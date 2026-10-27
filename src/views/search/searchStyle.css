@@ -1,0 +1,170 @@
+/* Layout and Container Styles */
+.search-card {
+  width: 95%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem;
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.search-header {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.search-title {
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.search-instruction {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Formal Form Rows and Integrated Inputs */
+.form-row {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 0;
+  border-radius: var(--border-radius-md);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.input-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  transition: var(--transition);
+}
+
+
+.input-wrapper label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.input-wrapper input {
+  border: none;
+  padding: 4px 0;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--text-main);
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+
+/* Placeholder Text Styles */
+.input-wrapper input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+  font-family: inherit;
+  opacity: 1;
+  font-size: 1rem;
+}
+
+/* Ant Design input (AutoComplete) */
+.ant-input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+  font-family: inherit;
+  opacity: 1;
+  font-size: 1rem;
+}
+
+/* Ant Design DatePicker placeholder text */
+.ant-picker-input > input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+  font-family: inherit;
+  opacity: 1;
+  font-size: 1rem;
+}
+
+/* When DatePicker is unfocused */
+.ant-picker-input > input {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Ant Design AutoComplete + DatePicker inputs */
+.ant-input,
+.ant-picker-input > input {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+
+
+/* Specific Dividers for Field Separation */
+.swap-icon {
+  width: 1px;
+  height: 40px;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.swap-icon::after {
+  content: "TO";
+  position: absolute;
+  background: white;
+  color: var(--text-light);
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 4px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 40px;
+  background-color: #e2e8f0;
+}
+
+/* Action Buttons */
+.search-card .btn-primary {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1.25rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  border-radius: var(--border-radius-md);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+}
+
+/* Third Party Component Alignment */
+.ant-select-auto-complete, .ant-picker {
+  width: 100% !important;
+}
+
+.ant-select-selection-search-input {
+  height: 30px !important;
+}
+
+
+
